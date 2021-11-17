@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity(), RecipeClickDeleteInterface, RecipeClic
         addFAB.setOnClickListener {
             val intent = Intent(this@MainActivity, AddEditRecipeActivity::class.java)
             startActivity(intent)
-            this.finish()
         }
     }
 
