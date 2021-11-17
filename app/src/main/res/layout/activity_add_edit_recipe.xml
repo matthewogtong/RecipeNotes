@@ -4,28 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
     tools:context=".view.AddEditRecipeActivity">
 
     <EditText
         android:id="@+id/id_edit_recipe_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:hint="@string/enter_recipe_title"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:layout_margin="10dp" />
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/id_edit_recipe_description"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="@string/enter_recipe_description"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:layout_margin="10dp"
+        android:layout_above="@id/id_btn_add_update"
+        android:layout_below="@id/id_edit_recipe_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="start|top"
+        android:hint="@string/enter_recipe_description"
         android:inputType="textMultiLine"
-        android:singleLine="false"/>
+        android:singleLine="false"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <Button
         android:id="@+id/id_btn_add_update"
@@ -34,6 +40,7 @@
         android:layout_margin="10dp"
         android:layout_alignParentBottom="true"
         android:text="Button"
+        android:background="@drawable/custom_button_back"
         android:textAllCaps="false" />
 
 
