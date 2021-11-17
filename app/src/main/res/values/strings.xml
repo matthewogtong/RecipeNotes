@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Recipe Notes</string>
+    <string name="enter_recipe_title">Enter Recipe Title</string>
+    <string name="enter_recipe_description">Enter Recipe Description</string>
 </resources>
