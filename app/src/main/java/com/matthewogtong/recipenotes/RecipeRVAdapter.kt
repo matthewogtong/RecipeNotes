@@ -1,6 +1,7 @@
 package com.matthewogtong.recipenotes
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -23,15 +24,31 @@ class RecipeRVAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.recipe_rv_item, parent, false)
+        return ViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.recipeTV.setText(allRecipes.get(position).recipeTitle)
+        holder.timeTV.setText("Last Updated : " +allRecipes[position].timeStamp)
+
+        holder.deleteIV.setOnClickListener {
+            recipeClickDeleteInterface.onDeleteIconClick(allRecipes[position])
+        }
+
+        holder.itemView.setOnClickListener {
+            recipeClickInterface.onRecipeClick(allRecipes[position])
+        }
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return allRecipes.size
+    }
+
+    fun updateList(newList : List<Recipe>) {
+        allRecipes.clear()
+        allRecipes.addAll(newList)
+        notifyDataSetChanged()
     }
 }
 
