@@ -1,9 +1,12 @@
-package com.matthewogtong.recipenotes
+package com.matthewogtong.recipenotes.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.matthewogtong.recipenotes.Recipe
+import com.matthewogtong.recipenotes.RecipeDatabase
+import com.matthewogtong.recipenotes.RecipeRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

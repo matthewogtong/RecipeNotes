@@ -9,8 +9,8 @@ import com.matthewogtong.recipenotes.databinding.RecipeRvItemBinding
 
 class RecipeRVAdapter(
     val context: Context,
-    val recipeClickInterface: RecipeClickInterface,
-    val recipeClickDeleteInterface: RecipeClickDeleteInterface
+    private val recipeClickInterface: RecipeClickInterface,
+    private val recipeClickDeleteInterface: RecipeClickDeleteInterface
 ) : RecyclerView.Adapter<RecipeRVAdapter.ViewHolder>(){
 
     private val allRecipes = ArrayList<Recipe>()
