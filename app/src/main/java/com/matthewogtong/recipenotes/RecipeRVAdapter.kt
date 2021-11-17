@@ -29,8 +29,8 @@ class RecipeRVAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.recipeTV.setText(allRecipes.get(position).recipeTitle)
-        holder.timeTV.setText("Last Updated : " +allRecipes[position].timeStamp)
+        holder.recipeTV.text = allRecipes.get(position).recipeTitle
+        holder.timeTV.text = "Last Updated : " +allRecipes[position].timeStamp
 
         holder.deleteIV.setOnClickListener {
             recipeClickDeleteInterface.onDeleteIconClick(allRecipes[position])
